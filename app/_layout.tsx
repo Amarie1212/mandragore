@@ -12,6 +12,7 @@ import WishlistPage from './paga/whishlistpage';
 import PersonPage from './paga/personpage';
 import AboutPage from './paga/aboutuspage';
 import React from 'react';
+import { scale, verticalScale } from 'react-native-size-matters';
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 // Prevent splash screen from auto-hiding before fonts are loaded

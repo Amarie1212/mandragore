@@ -21,41 +21,38 @@ const About = ({ currentTheme }: { currentTheme: { background: string; text: str
       </Text>
 
       <View
-      style={[
-        styles.container,
-        {
+        style={[styles.container, {
           flexDirection: Platform.OS === 'web' ? 'row' : 'column', // Horizontal on web, vertical on mobile
           justifyContent: 'space-between',
-        },
-      ]}
-    >
-  {/* Feature 1 */}
-  <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
-        <MaterialIcons name="info" size={50} color={currentTheme.text} />
-        <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Discover Dishes</Text>
-        <Text style={[styles.cardText, { color: currentTheme.text }]}>
-          Explore a wide range of dishes from different cuisines and regions. Find detailed recipes and cooking instructions to try at home.
-        </Text>
-      </View>
+        }]}
+      >
+        {/* Feature 1 */}
+        <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
+          <MaterialIcons name="info" size={50} color={currentTheme.text} />
+          <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Discover Dishes</Text>
+          <Text style={[styles.cardText, { color: currentTheme.text }]}>
+            Explore a wide range of dishes from different cuisines and regions. Find detailed recipes and cooking instructions to try at home.
+          </Text>
+        </View>
 
-      {/* Feature 2 */}
-      <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
-        <MaterialIcons name="restaurant-menu" size={50} color={currentTheme.text} />
-        <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Recipe Collection</Text>
-        <Text style={[styles.cardText, { color: currentTheme.text }]}>
-          Access a curated collection of recipes, ranging from quick snacks to gourmet meals. Perfect for both beginners and experienced cooks.
-        </Text>
-      </View>
+        {/* Feature 2 */}
+        <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
+          <MaterialIcons name="restaurant-menu" size={50} color={currentTheme.text} />
+          <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Recipe Collection</Text>
+          <Text style={[styles.cardText, { color: currentTheme.text }]}>
+            Access a curated collection of recipes, ranging from quick snacks to gourmet meals. Perfect for both beginners and experienced cooks.
+          </Text>
+        </View>
 
-      {/* Feature 3 */}
-      <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
-        <MaterialIcons name="local-dining" size={50} color={currentTheme.text} />
-        <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Food Categories</Text>
-        <Text style={[styles.cardText, { color: currentTheme.text }]}>
-          Browse dishes by categories like appetizers, main courses, desserts, and more. Find the perfect dish based on your preferences or dietary needs.
-        </Text>
+        {/* Feature 3 */}
+        <View style={[styles.card, { backgroundColor: currentTheme.itemBackground }]}>
+          <MaterialIcons name="local-dining" size={50} color={currentTheme.text} />
+          <Text style={[styles.cardTitle, { color: currentTheme.text }]}>Food Categories</Text>
+          <Text style={[styles.cardText, { color: currentTheme.text }]}>
+            Browse dishes by categories like appetizers, main courses, desserts, and more. Find the perfect dish based on your preferences or dietary needs.
+          </Text>
+        </View>
       </View>
-</View>
 
       <Text style={[styles.subtitle, { color: currentTheme.text }]}>What We Offer</Text>
       <Text style={[styles.body, { color: currentTheme.text }]}>
@@ -63,8 +60,6 @@ const About = ({ currentTheme }: { currentTheme: { background: string; text: str
         discover new flavors, learn about global cuisines, and experiment with new cooking techniques.
         Here's what you can expect:
       </Text>
-
-
 
       <View style={styles.list}>
         <Text style={[styles.listItem, { color: currentTheme.text }]}>
@@ -102,6 +97,9 @@ const About = ({ currentTheme }: { currentTheme: { background: string; text: str
           <Text style={styles.bold}>Disclaimer:</Text> We are not responsible for any issues arising from the use of recipes or instructions shared on the platform. Always use caution while cooking.
         </Text>
       </View>
+      
+      {/* Add paddingBottom to the ScrollView container */}
+      <View style={{ paddingBottom: 20 }} />
     </ScrollView>
   );
 };
